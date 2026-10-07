@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salud mental: mitos y realidades</title>
+  <meta name="description" content="Recorrido educativo e individual por 20 mitos comunes sobre salud mental y sus realidades.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <main id="main" tabindex="-1">
+
+    <!-- Inicio -->
+    <section id="intro" class="screen" aria-labelledby="intro-title">
+      <p class="eyebrow">Recorrido educativo</p>
+      <h1 id="intro-title">Salud mental: mitos y realidades</h1>
+      <p class="lead">Algunas ideas populares sobre la salud mental generan estigma y dificultan pedir apoyo. Recorre 20 cartas, a tu ritmo, y descubre la realidad detrás de cada mito.</p>
+      <p class="note">Esta información es educativa y no sustituye la evaluación, el diagnóstico ni el tratamiento de un profesional de la salud.</p>
+      <button type="button" class="btn primary" id="start">Comenzar</button>
+    </section>
+
+    <!-- Carta -->
+    <section id="card-screen" class="screen" hidden aria-label="Cartas de mitos y realidades">
+      <div class="progress" aria-hidden="false">
+        <div class="progress-text" id="progress-text" aria-live="polite"></div>
+        <div class="bar" role="progressbar" aria-label="Progreso" aria-valuemin="1" aria-valuemax="20" id="bar">
+          <span id="bar-fill"></span>
+        </div>
+      </div>
+
+      <article class="card" id="card" aria-labelledby="myth-title">
+        <p class="myth-num" id="myth-num"></p>
+        <h2 id="myth-title"></h2>
+        <div class="claim">
+          <span class="tag">Idea popular</span>
+          <p id="myth-claim"></p>
+        </div>
+        <button type="button" class="btn reveal" id="reveal" aria-expanded="false" aria-controls="reality">Revelar realidad</button>
+        <div class="reality" id="reality" hidden>
+          <span class="tag">Realidad</span>
+          <p id="reality-text"></p>
+          <details class="more" id="more">
+            <summary>¿Por qué se cree? y fuentes</summary>
+            <ul id="why-list"></ul>
+            <p class="sources"><strong>Fuentes:</strong> <span id="sources-text"></span></p>
+          </details>
+        </div>
+      </article>
+
+      <nav class="nav" aria-label="Navegación entre cartas">
+        <button type="button" class="btn secondary" id="prev">Anterior</button>
+        <button type="button" class="btn primary" id="next">Siguiente</button>
+      </nav>
+      <p class="footnote">Contenido educativo. No sustituye la atención de profesionales de la salud.</p>
+    </section>
+
+    <!-- Cierre -->
+    <section id="end" class="screen" hidden aria-labelledby="end-title">
+      <p class="eyebrow">Fin del recorrido</p>
+      <h2 id="end-title">La salud mental merece comprensión, información clara y apoyo sin estigma.</h2>
+      <p class="highlight">Buscar ayuda no es una señal de debilidad. Es una forma de cuidado.</p>
+      <p class="note">Este sitio tiene fines educativos y no sustituye la atención de profesionales de la salud. Si una persona está atravesando una situación de riesgo o necesita apoyo, debe contactar a los servicios de emergencia o a un profesional de su localidad.</p>
+      <div class="nav">
+        <button type="button" class="btn secondary" id="back">Volver a las cartas</button>
+        <button type="button" class="btn primary" id="restart">Reiniciar</button>
+      </div>
+    </section>
+
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

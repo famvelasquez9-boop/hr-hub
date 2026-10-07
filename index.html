@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Salud mental: mitos y realidades</title>
-  <meta name="description" content="Recorrido educativo e individual por 10 mitos comunes sobre salud mental y sus realidades.">
+  <meta name="description" content="Recorrido educativo e individual por 20 mitos comunes sobre salud mental y sus realidades.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
     <section id="intro" class="screen" aria-labelledby="intro-title">
       <p class="eyebrow">Recorrido educativo</p>
       <h1 id="intro-title">Salud mental: mitos y realidades</h1>
-      <p class="lead">Algunas ideas populares sobre la salud mental generan estigma y dificultan pedir apoyo. Recorre 10 cartas, a tu ritmo, y descubre la realidad detrás de cada mito.</p>
+      <p class="lead">Algunas ideas populares sobre la salud mental generan estigma y dificultan pedir apoyo. Recorre 20 cartas, a tu ritmo, y descubre la realidad detrás de cada mito.</p>
       <p class="note">Esta información es educativa y no sustituye la evaluación, el diagnóstico ni el tratamiento de un profesional de la salud.</p>
       <button type="button" class="btn primary" id="start">Comenzar</button>
     </section>
@@ -24,7 +24,7 @@
     <section id="card-screen" class="screen" hidden aria-label="Cartas de mitos y realidades">
       <div class="progress" aria-hidden="false">
         <div class="progress-text" id="progress-text" aria-live="polite"></div>
-        <div class="bar" role="progressbar" aria-label="Progreso" aria-valuemin="1" aria-valuemax="10" id="bar">
+        <div class="bar" role="progressbar" aria-label="Progreso" aria-valuemin="1" aria-valuemax="20" id="bar">
           <span id="bar-fill"></span>
         </div>
       </div>
@@ -40,6 +40,11 @@
         <div class="reality" id="reality" hidden>
           <span class="tag">Realidad</span>
           <p id="reality-text"></p>
+          <details class="more" id="more">
+            <summary>¿Por qué se cree? y fuentes</summary>
+            <ul id="why-list"></ul>
+            <p class="sources"><strong>Fuentes:</strong> <span id="sources-text"></span></p>
+          </details>
         </div>
       </article>
 

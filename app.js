@@ -3,54 +3,224 @@
 
   var MYTHS = [
     {
-      title: 'Exagerar el malestar',
-      claim: 'Hablar de salud mental es exagerar',
-      reality: 'Hablar de salud mental permite reconocer lo que una persona está viviendo y buscar apoyo oportunamente. Expresar malestar no significa exagerar ni llamar la atención. La salud mental forma parte del bienestar general, igual que la salud física.'
+      "title": "Terapia solo para “graves”",
+      "claim": "Ir al psicólogo es de locos / La terapia es solo para personas graves",
+      "reality": "La atención psicológica puede ayudar a cualquier persona que quiera mejorar su bienestar emocional, manejar el estrés, procesar experiencias o desarrollar nuevas habilidades. No está reservada para casos graves. Según la OMS, 1 de cada 4 personas necesitará apoyo en salud mental en algún momento de su vida.",
+      "why": [
+        "Se asocia la psicología con la “locura”",
+        "Hay poca educación en salud mental",
+        "Es común resolver todo dentro de la familia"
+      ],
+      "sources": "Mascayano et al. (2016); Ministerio de Salud de Argentina (2018); Hospital Escuela de Salud Mental (2025)"
     },
     {
-      title: 'Depresión y voluntad',
-      claim: 'La depresión es falta de fuerza de voluntad',
-      reality: 'La depresión no se resuelve simplemente esforzándose más. Puede afectar el estado de ánimo, la energía, el sueño, la concentración y la capacidad de realizar actividades cotidianas. El apoyo profesional, el acompañamiento y el tratamiento adecuado pueden ser importantes.'
+      "title": "Voluntad y salud mental",
+      "claim": "Los problemas de salud mental son debilidad de carácter o falta de fuerza de voluntad",
+      "reality": "La depresión, la ansiedad y otras condiciones tienen causas biológicas, psicológicas y sociales. No son fallas morales ni defectos de personalidad. Decir “échale ganas” no basta: el apoyo profesional y el acompañamiento pueden marcar la diferencia, y creer este mito genera culpa y vergüenza que retrasan pedir ayuda.",
+      "why": [
+        "Se valora “aguantar” como virtud",
+        "Frases como “tú puedes con esto” minimizan el malestar",
+        "Se desconoce que son condiciones de salud"
+      ],
+      "sources": "Universidad Veracruzana (2018); UNICEF (2023); El Salvador.com (2026)"
     },
     {
-      title: 'Peligrosidad',
-      claim: 'Las personas con problemas de salud mental son peligrosas',
-      reality: 'Tener una condición de salud mental no convierte automáticamente a una persona en peligrosa. Esta asociación es un estereotipo que genera miedo y discriminación. Las personas con problemas de salud mental son diversas y no deben definirse por un diagnóstico.'
+      "title": "Peligrosidad",
+      "claim": "Las personas con trastornos mentales son peligrosas o violentas",
+      "reality": "Tener una condición de salud mental no convierte a nadie en una persona peligrosa. La mayoría de las personas con estas condiciones no son violentas y, de hecho, es más probable que sean víctimas de violencia. Este estereotipo genera miedo, discriminación y aislamiento.",
+      "why": [
+        "Los medios suelen presentar casos aislados de forma sensacionalista",
+        "Se asocia históricamente “locura” con peligro",
+        "Hay poco contacto con personas en tratamiento"
+      ],
+      "sources": "Mascayano Tapia (2015); Revista Colombiana de Psiquiatría (2018); Ministerio de Salud de Argentina (2018)"
     },
     {
-      title: 'Fe y atención profesional',
-      claim: 'La fe y la atención profesional no pueden coexistir',
-      reality: 'Las creencias espirituales o religiosas pueden ser una fuente de apoyo para algunas personas. Al mismo tiempo, la atención psicológica o psiquiátrica puede ofrecer herramientas profesionales. Ambos tipos de apoyo pueden coexistir de manera respetuosa.'
+      "title": "Fe y depresión",
+      "claim": "La depresión es falta de fe, castigo divino o un problema espiritual",
+      "reality": "La depresión es una condición de salud con componentes biológicos, psicológicos y sociales; no es falta de fe ni un castigo. La fe y la espiritualidad pueden ser una fuente valiosa de apoyo, pero conviven con la atención profesional, no la reemplazan. Pensar que es un castigo puede sumar culpa y retrasar el tratamiento.",
+      "why": [
+        "Hay interpretaciones que ligan el sufrimiento con la falta de fe",
+        "Se suele acudir primero a líderes religiosos",
+        "Hay poca conexión entre servicios de salud y comunidades de fe"
+      ],
+      "sources": "Medical News Today (2021); Step Up for Mental Health (2023); GMHAN"
     },
     {
-      title: 'Emociones y género',
-      claim: 'Los hombres no deben mostrar emociones',
-      reality: 'Todas las personas tienen emociones, independientemente de su género. Expresar lo que se siente y pedir ayuda no es una debilidad. Ocultar constantemente las emociones puede dificultar la comunicación y retrasar la búsqueda de apoyo.'
+      "title": "Hombres y emociones",
+      "claim": "Los hombres no deben mostrar emociones; pedir ayuda es de débiles",
+      "reality": "Todas las personas tienen emociones, sin importar su género. Expresar lo que se siente y pedir ayuda es una muestra de autocuidado, no de debilidad. Callar siempre lo que se siente puede dificultar la comunicación y retrasar el apoyo que alguien necesita.",
+      "why": [
+        "Normas de género que asocian vulnerabilidad con debilidad",
+        "Se enseña a “aguantar” desde la familia",
+        "Se estigmatiza a los hombres que buscan terapia"
+      ],
+      "sources": "Workplace Options (2024); JMU Latinos Health (2023); SanaMetx (2025)"
     },
     {
-      title: 'Medicación',
-      claim: 'Tomar medicación significa que una persona está muy mal',
-      reality: 'La medicación puede formar parte del tratamiento para algunas condiciones de salud mental, pero no es necesaria para todas las personas. Su uso debe ser evaluado, indicado y supervisado por un profesional de la salud. Nunca se debe iniciar, suspender o modificar un medicamento sin orientación profesional.'
+      "title": "Medicación",
+      "claim": "Los medicamentos psiquiátricos son adictivos y te cambian la personalidad",
+      "reality": "No todos los medicamentos son iguales: la mayoría de los psicofármacos no generan adicción, y solo algunos (como ciertos ansiolíticos) pueden causar dependencia si se usan de forma inadecuada. Su propósito es aliviar síntomas, no cambiar quién eres. Un profesional debe evaluar, indicar y supervisar siempre su uso: nunca se debe iniciar, suspender o modificar un medicamento sin orientación profesional.",
+      "why": [
+        "Se confunden distintas clases de medicamentos",
+        "Hay experiencias de uso inadecuado o mal acompañado",
+        "Circula desinformación en redes sociales"
+      ],
+      "sources": "CADE (2025); Centro Alianza Chile (2021); Salud Mental Perinatal Panamá"
     },
     {
-      title: 'TDAH',
-      claim: 'El TDAH solo significa distraerse',
-      reality: 'El TDAH puede influir en la atención, la organización, el control de impulsos, la gestión del tiempo y la regulación de la energía. No es simplemente falta de interés o disciplina. Sus manifestaciones pueden variar entre personas y etapas de la vida.'
+      "title": "Duración y costo",
+      "claim": "La terapia dura años y cuesta una fortuna",
+      "reality": "Muchas terapias actuales tienen una duración definida, que suele ir de unas pocas semanas a algunos meses según cada caso. Además, existen opciones públicas, comunitarias, universitarias y en línea de bajo costo o gratuitas. Consulta qué servicios hay en tu localidad.",
+      "why": [
+        "Se piensa en terapias de muy larga duración",
+        "Se desconocen las opciones accesibles",
+        "Se percibe la psicología como un servicio para pocos"
+      ],
+      "sources": "Origen.pe (2026); Mipsi México (2024); Psicología y Mente (2017)"
     },
     {
-      title: 'Depresión posparto',
-      claim: 'La depresión posparto es exageración',
-      reality: 'Convertirse en madre no significa sentirse bien todo el tiempo. La depresión posparto puede incluir tristeza persistente, agotamiento, ansiedad, desconexión emocional o dificultad para realizar actividades cotidianas. Merece comprensión, apoyo y atención profesional.'
+      "title": "Solo en familia",
+      "claim": "Los problemas de salud mental son privados y solo se hablan en familia",
+      "reality": "La familia puede ser un gran apoyo, pero acompañar no es lo mismo que tratar. Las condiciones de salud mental pueden requerir atención profesional. Hablar con la familia y buscar ayuda especializada se complementan.",
+      "why": [
+        "Gran valor de la lealtad y la privacidad familiar",
+        "Desconfianza hacia instituciones de salud",
+        "Se piensa que “los problemas se quedan en casa”"
+      ],
+      "sources": "JMU Latinos Health (2023); ReachLink (2026); Center for Health Journalism"
     },
     {
-      title: 'Adicciones',
-      claim: 'Las adicciones son únicamente falta de carácter',
-      reality: 'Las adicciones son problemas complejos que pueden involucrar factores biológicos, psicológicos, sociales y ambientales. El estigma y las etiquetas pueden dificultar que una persona busque ayuda. La recuperación puede requerir apoyo profesional y una red de acompañamiento.'
+      "title": "Psicosis y posesión",
+      "claim": "La esquizofrenia es posesión demoníaca o una enfermedad espiritual",
+      "reality": "La esquizofrenia es una condición de salud mental que requiere atención médica. Algunas experiencias pueden tener contenido religioso, pero eso no las convierte en un asunto solo espiritual. La atención profesional ayuda, y las prácticas de exorcismo pueden causar daño y retrasar el tratamiento.",
+      "why": [
+        "Hay una larga tradición de interpretar la psicosis como posesión",
+        "Hay poco acceso a servicios en zonas rurales",
+        "Algunos síntomas pueden incluir contenido religioso"
+      ],
+      "sources": "ReachLink (2026); Noctumbria Blog"
     },
     {
-      title: 'Terapia en línea',
-      claim: 'La terapia en línea no funciona',
-      reality: 'La terapia también puede realizarse a través de una pantalla. La atención en línea puede ser una alternativa útil para algunas personas, siempre que se realice con un profesional calificado, en un entorno adecuado y mediante una modalidad apropiada para sus necesidades.'
+      "title": "TDAH",
+      "claim": "El TDAH no existe, es una excusa o mala crianza",
+      "reality": "El TDAH es una condición del neurodesarrollo con bases genéticas y neurobiológicas. No es causada por mala crianza ni por falta de disciplina. No se trata de distraerse de vez en cuando: es un patrón persistente que afecta la atención, la organización, el control de impulsos y la gestión del tiempo, y varía entre personas y etapas de la vida.",
+      "why": [
+        "Se piensa que “todos nos distraemos a veces”",
+        "Se habla de “moda diagnóstica”",
+        "Se culpa a niñas, niños y madres o padres"
+      ],
+      "sources": "TDAH Latinoamérica (2026)"
+    },
+    {
+      "title": "Trabajo",
+      "claim": "Las personas con trastornos mentales no pueden trabajar",
+      "reality": "Con los apoyos adecuados, muchas personas con condiciones de salud mental trabajan y llevan vidas plenas. Un diagnóstico no define la capacidad de una persona. La discriminación y la falta de ajustes razonables son una barrera mayor que la condición misma.",
+      "why": [
+        "Estereotipos de incapacidad",
+        "Faltan políticas de inclusión laboral",
+        "Se generaliza a partir de personas sin tratamiento"
+      ],
+      "sources": "SOM360; Ministerio de Salud de Argentina (2018); Mascayano Tapia (2015)"
+    },
+    {
+      "title": "Vejez y depresión",
+      "claim": "La depresión en adultos mayores es normal, es parte de envejecer",
+      "reality": "La depresión no es una consecuencia normal del envejecimiento. Es una condición tratable que merece atención a cualquier edad. Asumir que “es normal” hace que muchas personas mayores no reciban el apoyo que necesitan.",
+      "why": [
+        "Prejuicios por edad",
+        "Se confunde la tristeza por una pérdida con depresión",
+        "Falta formación en salud mental en la vejez"
+      ],
+      "sources": "OMS (2026); OPS (2023); UNAM (2022)"
+    },
+    {
+      "title": "Depresión posparto",
+      "claim": "La depresión posparto es exageración; las madres deben ser fuertes",
+      "reality": "Convertirse en madre no significa sentirse bien todo el tiempo. La depresión posparto puede incluir tristeza persistente, agotamiento, ansiedad, desconexión emocional o dificultad para realizar actividades cotidianas. No es debilidad ni una falla materna: merece comprensión, apoyo y atención profesional.",
+      "why": [
+        "Se espera que la maternidad sea siempre plenitud",
+        "Se minimizan los síntomas",
+        "Da vergüenza admitir dificultades"
+      ],
+      "sources": "Postpartum Support International (2025); Wired (2026); Carmona.mx (2026)"
+    },
+    {
+      "title": "Adicciones",
+      "claim": "Las adicciones son vicio, falta de voluntad o pecado",
+      "reality": "Las adicciones son problemas complejos que involucran factores biológicos, psicológicos, sociales y ambientales. No son una falla moral. El estigma y las etiquetas dificultan pedir ayuda. La recuperación puede requerir apoyo profesional y una red de acompañamiento.",
+      "why": [
+        "Se interpretan como un tema moral o religioso",
+        "Hay estigma hacia el consumo de sustancias",
+        "Se asocian con criminalidad"
+      ],
+      "sources": "Mascayano Tapia (2015); Instituto NOA (2024); Centro Terapéutico Sur de Chile"
+    },
+    {
+      "title": "Juventud “exitosa”",
+      "claim": "Los adolescentes con buenas notas y amigos no pueden tener depresión",
+      "reality": "La depresión y la ansiedad pueden afectar a cualquier adolescente, sin importar sus notas o su vida social. Que por fuera todo parezca estar bien no significa que por dentro lo esté. Escuchar y creer su malestar permite apoyarles a tiempo.",
+      "why": [
+        "Se piensa que el malestar siempre se nota",
+        "Se minimiza el malestar de quienes “lo tienen todo”",
+        "Se cree que “no tienen por qué estar tristes”"
+      ],
+      "sources": "UNICEF (2023); UNICEF El Salvador (2023)"
+    },
+    {
+      "title": "Redes sociales",
+      "claim": "Las redes sociales causan la depresión de los jóvenes",
+      "reality": "La relación es compleja. El uso excesivo se asocia con mayor riesgo en algunas personas, pero el tipo de uso importa y las redes no explican por sí solas el malestar. Culpar solo a las redes puede ocultar otras causas, como la violencia, la presión o la falta de apoyo.",
+      "why": [
+        "Se buscan explicaciones simples a problemas complejos",
+        "Titulares alarmistas",
+        "Se confunde asociación con causa"
+      ],
+      "sources": "SciELO Venezuela (2025); Psique Académica (2025); Milenio (2026)"
+    },
+    {
+      "title": "Autismo",
+      "claim": "El autismo es causado por vacunas o por mala crianza",
+      "reality": "El autismo es una condición del neurodesarrollo con bases genéticas. No lo causan las vacunas ni la forma de criar. Este mito culpa injustamente a las familias y puede alejar de la vacunación y del apoyo adecuado.",
+      "why": [
+        "Circula desinformación en redes",
+        "Hay poca educación sobre neurodiversidad",
+        "Se buscan causas simples"
+      ],
+      "sources": "Mito de circulación global; el documento fuente señala que hay poca investigación específica en América Latina"
+    },
+    {
+      "title": "Terapia en línea",
+      "claim": "La terapia en línea no funciona o no es terapia de verdad",
+      "reality": "La terapia también puede hacerse a través de una pantalla. Para muchas personas y situaciones puede ser una alternativa útil, siempre que la brinde un profesional calificado, en un entorno adecuado y con una modalidad apropiada a sus necesidades.",
+      "why": [
+        "Se prefiere el contacto cara a cara",
+        "Hay poca familiaridad con la tecnología",
+        "Existen barreras reales como la conexión o la privacidad"
+      ],
+      "sources": "Mipsi México (2024)"
+    },
+    {
+      "title": "Pedir ayuda es egoísta",
+      "claim": "Pedir ayuda psicológica es egoísta o fallarle a la familia",
+      "reality": "Cuidar tu salud mental no es egoísmo: también te permite estar mejor con las personas que quieres. Pedir apoyo es una forma de responsabilidad contigo y con tu entorno, especialmente si cuidas de otras personas.",
+      "why": [
+        "Ideal de sacrificio constante, sobre todo en mujeres y cuidadores",
+        "Prioridad absoluta a la familia sobre lo individual",
+        "Temor a ser una carga"
+      ],
+      "sources": "ReachLink (2026); JMU Latinos Health (2024); Postpartum Support International (2025)"
+    },
+    {
+      "title": "Recuperación",
+      "claim": "Los trastornos mentales son incurables; la persona nunca mejorará",
+      "reality": "La recuperación es posible. Con tratamiento, apoyo y acompañamiento adecuados, muchas personas mejoran, logran estabilidad y viven bien. Un diagnóstico no es una sentencia ni define el futuro de nadie.",
+      "why": [
+        "Se ven casos de personas sin atención adecuada",
+        "Hay poca información sobre cómo evolucionan estas condiciones",
+        "Se ve el diagnóstico como una sentencia"
+      ],
+      "sources": "SOM360; Ministerio de Salud de Argentina (2018)"
     }
   ];
 
@@ -72,9 +242,15 @@
     $('myth-title').textContent = m.title;
     $('myth-claim').textContent = '“' + m.claim + '”';
     $('reality-text').textContent = m.reality;
+    var why = $('why-list');
+    why.textContent = '';
+    m.why.forEach(function (w) { var li = document.createElement('li'); li.textContent = w; why.appendChild(li); });
+    $('sources-text').textContent = m.sources;
+    $('more').open = false;
     $('progress-text').textContent = 'Mito ' + n + ' de ' + total;
     $('bar-fill').style.width = (n / total * 100) + '%';
     var bar = $('bar');
+    bar.setAttribute('aria-valuemax', total);
     bar.setAttribute('aria-valuenow', n);
     bar.setAttribute('aria-valuetext', 'Mito ' + n + ' de ' + total);
     setRevealed(!!revealed[index]);

@@ -143,3 +143,10 @@ p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+.more { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 10px; font-size: 1rem; }
+.more summary { cursor: pointer; font-weight: 700; color: var(--primary); min-height: 44px; display: flex; align-items: center; }
+.more summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+.more ul { margin: 8px 0; padding-left: 22px; }
+.more li { margin-bottom: 4px; }
+.sources { font-size: .9rem; color: var(--muted); }

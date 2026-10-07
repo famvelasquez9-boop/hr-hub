@@ -4,70 +4,88 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Salud mental: mitos y realidades</title>
-  <meta name="description" content="Recorrido educativo e individual por 20 mitos comunes sobre salud mental y sus realidades.">
+  <meta name="description" content="Explora 10 mitos comunes sobre salud mental y descubre su realidad, a tu ritmo.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip" href="#main">Saltar al contenido</a>
-  <main id="main" tabindex="-1">
+  <a class="skip" href="#mitos">Saltar a los mitos</a>
+  <main id="main">
 
-    <!-- Inicio -->
-    <section id="intro" class="screen" aria-labelledby="intro-title">
+    <header class="hero">
       <p class="eyebrow">Recorrido educativo</p>
-      <h1 id="intro-title">Salud mental: mitos y realidades</h1>
-      <p class="lead">Algunas ideas populares sobre la salud mental generan estigma y dificultan pedir apoyo. Recorre 20 cartas, a tu ritmo, y descubre la realidad detrás de cada mito.</p>
+      <h1>Salud mental: mitos y realidades</h1>
+      <p class="lead">Algunas ideas populares sobre la salud mental generan estigma y dificultan pedir apoyo. Toca cualquier carta para descubrir la realidad, en el orden que quieras.</p>
       <p class="note">Esta información es educativa y no sustituye la evaluación, el diagnóstico ni el tratamiento de un profesional de la salud.</p>
-      <button type="button" class="btn primary" id="start">Comenzar</button>
+    </header>
+
+    <section id="mitos" aria-labelledby="mitos-title">
+      <div class="section-head">
+        <h2 id="mitos-title">Mitos</h2>
+        <p class="explored" id="explored" role="status" aria-live="polite">Has explorado 0 de 10</p>
+      </div>
+      <ul class="grid" id="grid"></ul>
     </section>
 
-    <!-- Carta -->
-    <section id="card-screen" class="screen" hidden aria-label="Cartas de mitos y realidades">
-      <div class="progress" aria-hidden="false">
-        <div class="progress-text" id="progress-text" aria-live="polite"></div>
-        <div class="bar" role="progressbar" aria-label="Progreso" aria-valuemin="1" aria-valuemax="20" id="bar">
-          <span id="bar-fill"></span>
+    <section class="support" id="apoyo" aria-labelledby="apoyo-title">
+      <h2 id="apoyo-title">¿Necesitas hablar con alguien?</h2>
+      <p>Estas líneas de apoyo son externas y gratuitas o de atención general. Toca un número para llamar desde tu celular.</p>
+
+      <div class="support-groups">
+        <div class="support-group">
+          <h3>México</h3>
+          <ul>
+            <li>
+              <span class="who">Línea de la Vida (Secretaría de Salud, CONASAMA)</span>
+              <a class="call" href="tel:8009112000" aria-label="Llamar a la Línea de la Vida, 800 911 2000">800 911 2000</a>
+              <span class="hours">24/7</span>
+            </li>
+            <li>
+              <span class="who">SAPTEL (Cruz Roja)</span>
+              <a class="call" href="tel:5552598121" aria-label="Llamar a SAPTEL, 55 5259 8121">55 5259 8121</a>
+              <span class="hours">24/7</span>
+            </li>
+          </ul>
+        </div>
+        <div class="support-group">
+          <h3>Honduras</h3>
+          <ul>
+            <li>
+              <span class="who">Teléfono de la Esperanza (Tegucigalpa, San Pedro Sula y La Ceiba)</span>
+              <a class="call" href="tel:150" aria-label="Llamar al Teléfono de la Esperanza, 150">150</a>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <article class="card" id="card" aria-labelledby="myth-title">
-        <p class="myth-num" id="myth-num"></p>
-        <h2 id="myth-title"></h2>
-        <div class="claim">
-          <span class="tag">Idea popular</span>
-          <p id="myth-claim"></p>
-        </div>
-        <button type="button" class="btn reveal" id="reveal" aria-expanded="false" aria-controls="reality">Revelar realidad</button>
-        <div class="reality" id="reality" hidden>
-          <span class="tag">Realidad</span>
-          <p id="reality-text"></p>
-          <details class="more" id="more">
-            <summary>¿Por qué se cree? y fuentes</summary>
-            <ul id="why-list"></ul>
-            <p class="sources"><strong>Fuentes:</strong> <span id="sources-text"></span></p>
-          </details>
-        </div>
-      </article>
+      <p class="emergency"><strong>En emergencias:</strong> <a class="call" href="tel:911" aria-label="Llamar al 911">911</a> en México y en Honduras.</p>
 
-      <nav class="nav" aria-label="Navegación entre cartas">
-        <button type="button" class="btn secondary" id="prev">Anterior</button>
-        <button type="button" class="btn primary" id="next">Siguiente</button>
-      </nav>
-      <p class="footnote">Contenido educativo. No sustituye la atención de profesionales de la salud.</p>
-    </section>
-
-    <!-- Cierre -->
-    <section id="end" class="screen" hidden aria-labelledby="end-title">
-      <p class="eyebrow">Fin del recorrido</p>
-      <h2 id="end-title">La salud mental merece comprensión, información clara y apoyo sin estigma.</h2>
-      <p class="highlight">Buscar ayuda no es una señal de debilidad. Es una forma de cuidado.</p>
+      <div class="closing">
+        <p class="highlight">La salud mental merece comprensión, información clara y apoyo sin estigma.</p>
+        <p class="highlight">Buscar ayuda no es una señal de debilidad. Es una forma de cuidado.</p>
+      </div>
       <p class="note">Este sitio tiene fines educativos y no sustituye la atención de profesionales de la salud. Si una persona está atravesando una situación de riesgo o necesita apoyo, debe contactar a los servicios de emergencia o a un profesional de su localidad.</p>
-      <div class="nav">
-        <button type="button" class="btn secondary" id="back">Volver a las cartas</button>
-        <button type="button" class="btn primary" id="restart">Reiniciar</button>
-      </div>
     </section>
 
   </main>
+
+  <dialog id="dialog" aria-labelledby="d-title">
+    <article class="d-body">
+      <p class="myth-num" id="d-num"></p>
+      <h2 id="d-title"></h2>
+      <div class="claim">
+        <span class="tag">Idea popular</span>
+        <p id="d-claim"></p>
+      </div>
+      <div class="reality">
+        <span class="tag">Realidad</span>
+        <p id="d-reality"></p>
+      </div>
+      <p class="sources"><strong>Fuentes:</strong> <span id="d-sources"></span></p>
+      <p class="footnote">Contenido educativo. No sustituye la atención de profesionales de la salud.</p>
+      <button type="button" class="btn primary" id="d-close">Volver a los mitos</button>
+    </article>
+  </dialog>
+
   <script src="app.js"></script>
 </body>
 </html>
